@@ -1,9 +1,9 @@
 import './Header.css';
 
-function Header(){
+function Header({text}){
 	return(
 		<div className='header'>
-			<p>Поиск</p>
+			<p>{text}</p>
 		</div>
 	);
 }
