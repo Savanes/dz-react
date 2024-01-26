@@ -1,12 +1,12 @@
-import './Body.css';
-
+import styles from './Body.module.css';
+import classNames from 'classnames';
 
 function Body(){
 
 	
 
 	return(
-		<div className='body-main'>
+		<div className={classNames(styles['body-main'])}>
         
 		</div>
 	);

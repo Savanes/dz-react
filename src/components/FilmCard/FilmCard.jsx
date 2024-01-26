@@ -1,6 +1,7 @@
 // import InFavorites from '../InFavorites/InFavorites';
 import ToFavorites from '../ToFavorites/ToFavorites';
-import './FilmCard.css';
+import styles from './FilmCard.module.css';
+import classNames from 'classnames';
 
 
 const logosvg = <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,12 +12,12 @@ const logosvg = <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmln
 function FilmCard({logo, text}){
 
 	return(
-		<div className='filmcard'>
-			<p className='grade-film-svg'>{logosvg}</p>
-			<div className='img-film'>
+		<div className={classNames(styles.filmcard)}>
+			<p className={classNames(styles['grade-film-svg'])}>{logosvg}</p>
+			<div className={classNames(styles['img-film'])}>
 				<img  src={logo} alt="" />
 			</div>
-			<p className='filmcard-name'>{text}</p>
+			<p className={classNames(styles['filmcard-name'])}>{text}</p>
 
 			<ToFavorites/>
 

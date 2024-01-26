@@ -1,4 +1,5 @@
-import './Navmenu.css';
+import styles from './Navmenu.module.css';
+import classNames from 'classnames';
 // import './logo.svg';
 
 function Navmenu(){
@@ -15,13 +16,13 @@ function Navmenu(){
 	</svg>;
 
 	return( 
-		<div className="navmenu">
+		<div className={classNames(styles.navmenu)}>
 			{logo}
-			<div className='navmenu-wrapper'>
-				<a className="navmenu-search">Поиск фильмов</a>
-				<a className="navmenu-films">Мои фильмы</a>
+			<div className={classNames(styles['navmenu-wrapper'])}>
+				<a className={classNames(styles['navmenu-search'])}>Поиск фильмов</a>
+				<a className={classNames(styles['navmenu-films'])}>Мои фильмы</a>
 				<a></a>
-				<a className="navmenu-reg">Войти {logoReg}</a>
+				<a className={classNames(styles['navmenu-reg'])}>Войти {logoReg}</a>
 			</div>
 		</div>
 	);
