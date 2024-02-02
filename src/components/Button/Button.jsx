@@ -1,8 +1,12 @@
 import './Button.css';
 
-function Button(){
+
+function Button({text}){
+
+	
+
 	return(
-		<button className='btn'>Искать</button>
+		<button className='btn'>{text}</button>
 	);
 }
 

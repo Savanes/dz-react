@@ -1,9 +1,9 @@
 import './Paragraf.css';
 
-function Paragraf(){
+function Paragraf({text}){
 	return(
 		<div className='paragraf'>
-			<p>Введите название фильма, сериала или мультфильма для поиска и добавления в избранное.</p>
+			<p>{text}</p>
 		</div>
 	);
 }
