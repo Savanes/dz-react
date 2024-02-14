@@ -11,7 +11,7 @@ function ToFavorites(){
 	return(
 		<div className={classNames(styles.tofavorites)}>
 			{logosvg}
-			<p className={classNames(styles.tofavorit)}>В избранное</p>
+			<button className={classNames(styles.tofavorit)}>В избранное</button>
 		</div>
 	);
 }
