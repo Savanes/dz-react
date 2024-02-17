@@ -1,4 +1,3 @@
-
 import Button from '../Button/Button';
 import styles from './Search.module.css';
 import classNames from 'classnames';

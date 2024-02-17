@@ -1,4 +1,3 @@
-// import InFavorites from '../InFavorites/InFavorites';
 import Rating from '../Rating/Rating';
 import ToFavorites from '../ToFavorites/ToFavorites';
 import styles from './FilmCard.module.css';
@@ -19,7 +18,6 @@ function FilmCard({logo, text}){
 
 			<ToFavorites/>
 
-			{/* <InFavorites/> */}
 		</div>
 	);
 }

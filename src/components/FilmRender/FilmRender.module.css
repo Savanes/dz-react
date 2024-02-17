@@ -1,6 +1,5 @@
 .filmcard-wrap {
     display: grid;
-    /* text-align: center; */
     grid-template-columns: repeat(4, 23%);
     gap: 30px;
     margin: 100px 120px 80px 120px;

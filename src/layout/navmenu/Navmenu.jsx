@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { useEffect } from 'react';
 import { UserContext } from '../../context/user.context';
 
-function Navmenu({username}){
+function Navmenu(){
 
 	const [enter, setEnter] = useState('войти');
 
@@ -22,12 +22,17 @@ function Navmenu({username}){
 	</svg>;
 
 
-	const local = localStorage.getItem('users');
+	const local = localStorage.getItem('users'); 
 	const localSt = JSON.parse(local);
-	const localStor = localSt[0].isLogined;
+	const localStor = localSt ? localSt[0].isLogined : null ;
 
 
-	setName(localSt[0].name);
+
+	if(localSt){
+		setName(localSt[0].name);
+	}else{
+		setName('');
+	}
 
 	const exitProfile = () => {
 		if(enter === 'выйти'){
@@ -38,7 +43,7 @@ function Navmenu({username}){
 	};
 
 	useEffect(() => {
-		console.log(localStor);
+		console.log(isLogined);
 		if(localStor === true){
 			setEnter('выйти');
 		}else{
@@ -53,8 +58,7 @@ function Navmenu({username}){
 			<div className={classNames(styles['navmenu-wrapper'])}>
 				<a className={classNames(styles['navmenu-search'])}>Поиск фильмов</a>
 				<a className={classNames(styles['navmenu-films'])}>Мои фильмы</a>
-				{/* <a>{username}</a> */}
-				<a>{name}</a>
+				<a>{localStor === false ? '' : name }</a>
 				<a onClick={exitProfile} className={classNames(styles['navmenu-reg'])}>{enter}{logoReg}</a>
 			</div>
 		</div>

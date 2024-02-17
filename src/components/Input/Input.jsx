@@ -17,13 +17,6 @@ function Input({text,buttonText}){
 
 		if(formProps.name){
 			localStorage.setItem('users', JSON.stringify([{ name: formProps.name, isLogined: isLog }]));
-			// localStorage.setItem('users', JSON.stringify([{}]));
-			// const obj = localStorage.getItem('users');
-			// const objParse = JSON.parse(obj);
-			// const userArr = ('users', ([{ name: formProps.name, isLogined: isLog }]));
-			// const arrF = [ ...objParse, userArr];
-			// localStorage.setItem(JSON.stringify(arrF));
-			// setIsLogined('залогинен');
 		}else{
 			alert('ведите имя');
 		}
