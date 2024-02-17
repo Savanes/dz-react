@@ -8,6 +8,7 @@
 .navmenu-wrapper{
     display: flex;
     gap: 40px;
+    cursor: pointer;
 }
 
 .navmenu-search{

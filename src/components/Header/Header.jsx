@@ -1,9 +1,19 @@
-import './Header.css';
+import Navmenu from '../../layout/navmenu/Navmenu';
+import styles from './Header.module.css';
+import classNames from 'classnames';
+
+
 
 function Header({text}){
+
 	return(
-		<div className='header'>
-			<p>{text}</p>
+		<div className={classNames(styles.header)}>
+
+			<Navmenu/>
+
+			<div className={styles.headerP}>
+				<p>{text}</p>
+			</div>
 		</div>
 	);
 }

@@ -3,54 +3,22 @@
 import './App.css';
 import FilmCard from './components/FilmCard/FilmCard';
 import Header from './components/Header/Header';
+import Input from './components/Input/Input';
 import Paragraf from './components/Paragraf/Paragraf';
+import Rating from './components/Rating/Rating';
 import Search from './components/Search/Search';
+import ToFavorites from './components/ToFavorites/ToFavorites';
 import Navmenu from './layout/navmenu/Navmenu';
+import { films } from './films';
+import FilmRender from './components/FilmRender/FilmRender';
+import { UserContext } from './context/user.context';
+import { useState } from 'react';
 
 function App() {
 
-	const films = [
-		{
-			id: 1,
-			logo:'./card1.png',
-			name: 'Black Widow',
-		},
-		{
-			id: 2, 
-			logo: './card2.png',
-			name: 'Shang Chi',
-		},
-		{
-			id: 3,
-			logo: './card3.png',
-			name: 'Loki',
-		},
-		{
-			id: 4,
-			logo: './card4.png',
-			name: 'How I Met Your Mother',
-		},
-		{
-			id: 5,
-			logo: './card5.png',
-			name: 'Money Heist',
-		},
-		{
-			id: 6,
-			logo: './card6.png',
-			name: 'Friends',
-		},
-		{
-			id: 7,
-			logo: './card7.png',
-			name: 'The Big Bang Theory',
-		},
-		{
-			id: 8,
-			logo: './card8.png',
-			name: 'Two And a Half Men',
-		}
-	];
+	const [isLogined, setIsLogined] = useState('false');
+
+	const [name, setName] = useState('');
 
 
 
@@ -59,16 +27,27 @@ function App() {
 		<path d="M22 22L20 20" stroke="#475069" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 	</svg>;
 
+
+
+	// const userName = localStorage.getItem('isLogined') == 'true' ? localStorage.getItem('name') : '';
+
 	return (
-		<>
-			<Navmenu/>
-			
+		<UserContext.Provider value={{ isLogined, setIsLogined, name, setName}}>
+			<>
+				<Header
+					text="Вход"
+				/>
 
-			<Header
-				text="Поиск"
-			/>
+				<Input
+					text={'Ваше имя'}
+					buttonText="Войти в профиль"
+				/>
 
-			<Paragraf
+				{/* <Header
+					text="Поиск"
+				/> */}
+
+				{/* <Paragraf
 				text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное."
 			/>
 
@@ -76,18 +55,12 @@ function App() {
 				text="Введите название"
 				logo={logo}
 				buttonText="Искать"
-			/>
+			/> */}
 
-			<div className='filmcard-wrap'> 
-				{films.map((el) => {
-					return <FilmCard 
-						logo={el.logo}
-						text={el.name}
-						key={el.id}
-					/>;
-				})}
-			</div>
-		</>
+				<FilmRender/>
+
+			</>
+		</UserContext.Provider>
 	);
 }
 

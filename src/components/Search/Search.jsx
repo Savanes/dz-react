@@ -1,13 +1,13 @@
-
 import Button from '../Button/Button';
-import './Search.css';
+import styles from './Search.module.css';
+import classNames from 'classnames';
 
 function Search({text,logo,buttonText}){
     
 	return(
-		<div className='search'>
-			<p className='search-logo-svg'>{logo}</p>
-			<input className='search-input' placeholder={text} type="text"/>
+		<div className={classNames(styles.search)}>
+			<p className={classNames(styles['search-logo-svg'])}>{logo}</p>
+			<input className={classNames(styles['search-input'])} placeholder={text} type="text"/>
 
 			<Button
 				text={buttonText}
