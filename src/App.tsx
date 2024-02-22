@@ -1,15 +1,15 @@
 
 
 import './App.css';
-import FilmCard from './components/FilmCard/FilmCard';
+// import FilmCard from './components/FilmCard/FilmCard';
 import Header from './components/Header/Header';
 import Input from './components/Input/Input';
-import Paragraf from './components/Paragraf/Paragraf';
-import Rating from './components/Rating/Rating';
-import Search from './components/Search/Search';
-import ToFavorites from './components/ToFavorites/ToFavorites';
-import Navmenu from './layout/navmenu/Navmenu';
-import { films } from './films';
+// import Paragraf from './components/Paragraf/Paragraf';
+// import Rating from './components/Rating/Rating';
+// import Search from './components/Search/Search';
+// import ToFavorites from './components/ToFavorites/ToFavorites';
+// import Navmenu from './layout/navmenu/Navmenu';
+// import { films } from './films';
 import FilmRender from './components/FilmRender/FilmRender';
 import { UserContext } from './context/user.context';
 import { useState } from 'react';

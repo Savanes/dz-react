@@ -1,8 +1,9 @@
 import Button from '../Button/Button';
 import styles from './Search.module.css';
 import classNames from 'classnames';
+import { SearchProps } from './Search.props';
 
-function Search({text,logo,buttonText}){
+function Search({text,logo,buttonText}: SearchProps){
     
 	return(
 		<div className={classNames(styles.search)}>

@@ -1,8 +1,14 @@
+interface filmsArr {
+	id: number
+	logo: string
+	name: string
+}
 
-export const films = [
+
+export const films: filmsArr[]  = [
 	{
 		id: 1,
-		logo:'./card1.png',
+		logo: './card1.png',
 		name: 'Black Widow',
 	},
 	{

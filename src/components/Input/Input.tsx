@@ -1,19 +1,20 @@
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import Button from '../Button/Button';
 import styles from './Input.module.css';
 import classNames from 'classnames';
-import { UserContext } from '../../context/user.context';
+// import { UserContext } from '../../context/user.context';
+import { InputProps } from './Input.props';
 
-function Input({text,buttonText}){
+function Input({text,buttonText}: InputProps){
 
-	const{ setIsLogined } = useContext(UserContext);
+	// const{ setIsLogined } = useContext(UserContext);
 
 	const submitForm = (e)=>{
 		e.preventDefault();
 		const formData = new FormData(e.target);
 		const  formProps = Object.fromEntries(formData);
 
-		let isLog = true;
+		const isLog = true;
 
 		if(formProps.name){
 			localStorage.setItem('users', JSON.stringify([{ name: formProps.name, isLogined: isLog }]));
