@@ -26,7 +26,7 @@ function Input({text,buttonText}: InputProps){
 
 	return(
 		<form onSubmit={submitForm} className={classNames(styles.input)}>
-			<div>
+			<div >
 				<input name="name" className={classNames(styles['input-input'])} placeholder={text} type="text"/>
 				<div>
 					<Button

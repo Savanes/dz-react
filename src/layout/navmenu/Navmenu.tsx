@@ -3,6 +3,7 @@ import styles from './Navmenu.module.css';
 import classNames from 'classnames';
 import { useEffect } from 'react';
 import { UserContext } from '../../context/user.context';
+import { Link } from 'react-router-dom';
 
 function Navmenu(){
 
@@ -56,10 +57,10 @@ function Navmenu(){
 		<div className={classNames(styles.navmenu)}>
 			{logo}
 			<div className={classNames(styles['navmenu-wrapper'])}>
-				<a className={classNames(styles['navmenu-search'])}>Поиск фильмов</a>
-				<a className={classNames(styles['navmenu-films'])}>Мои фильмы</a>
+				<a href='/' className={classNames(styles['navmenu-search'])}>Поиск фильмов</a>
+				<a href='/favorites' className={classNames(styles['navmenu-films'])}>Мои фильмы</a>
 				<a>{localStor === false ? '' : name }</a>
-				<a onClick={exitProfile} className={classNames(styles['navmenu-reg'])}>{enter}{logoReg}</a>
+				<a href='/login' onClick={exitProfile} className={classNames(styles['navmenu-reg'])}>{enter}{logoReg}</a>
 			</div>
 		</div>
 			
