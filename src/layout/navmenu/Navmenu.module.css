@@ -8,6 +8,10 @@
 .navmenu-wrapper{
     display: flex;
     gap: 40px;
+    cursor: pointer;
+}
+.navmenu-wrapper a{
+    text-decoration: none;
 }
 
 .navmenu-search{

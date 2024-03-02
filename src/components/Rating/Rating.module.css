@@ -1,0 +1,10 @@
+.rating-logo{
+    position: relative;
+    top: 60px;
+    left: 16px;
+    background:rgba(0, 0, 0, 0.65);
+    width: 50px;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-top: -60px;
+}
